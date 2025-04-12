@@ -18,8 +18,13 @@
 <body>
     <h1>HTML Layout</h1>
     <p>HTML Layout is a way of arranging the elements on a web page. Proper layout is important for a website to look good and work properly.</p>
+
+    <input type="text" placeholder="pick you choice" style="margin: 20px;">
+
    
     <script>
+
+
         console.log('Hello World');
 
         let name = 'John Doe';
@@ -44,10 +49,54 @@
         console.log(newGreet);
 
 
-        let messageAge = prompt('What is your age?');
-        console.log(age);
         
+        
+
+        const ternaryName = (name === 'John Doe') ? 'yes' : 'no';
+        console.log(ternaryName);
        
+
+        // This is a the game for the console
+        // This is a the computer choice
+        console.log('lets play');
+        const computerChoice = getComputerChoice();
+        function getComputerChoice(){
+            const choices = ['rock', 'paper', 'scissors'];
+            const randomIndex = Math.floor(Math.random() * choices.length);
+            return choices[randomIndex];
+        }
+        // This is the human choice
+        let humanChoice;
+        function getHumanChoice(){
+            humanChoice = prompt('pick your choice').toLocaleLowerCase();
+            if (humanChoice === 'rock' || humanChoice === 'paper' || humanChoice === 'scissors') {
+                console.log('You picked: ' + humanChoice);
+                console.log('Computer picked: ' + computerChoice);
+                return humanChoice;
+            } else {
+                alert('Invalid choice, please try again.');
+                return getHumanChoice();
+            }
+        }
+        getHumanChoice();
+        // This is a the game result
+        const gameResult = (humanChoice, computerChoice) => {
+            if (humanChoice === computerChoice){
+                console.log('It\'s a tie!');
+            }
+            else if (
+                (humanChoice === 'rock' && computerChoice === 'scissors') ||
+                (humanChoice === 'paper' && computerChoice === 'rock') ||
+                (humanChoice === 'scissors' && computerChoice === 'paper')){
+                console.log('You win!');
+                }
+            else {
+                console.log('You lose!');
+            }
+        }
+        gameResult(humanChoice, computerChoice);
+        // This is a comment
+        // This is a comment
 
     </script>
     <!-- This is space --><!-- This is space --><!-- This is space -->
