@@ -6,8 +6,8 @@
     <title>HTML Layout</title>
     <style>
         .body {
-            background-color: #26514a;
-            color: #333;
+            background-color: #477aa4;
+            color: #ffffff;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -108,58 +108,14 @@
         console.log(x('hello'));
 
 
-        const anArray = [1, 2, 3, 4, 5];
-        let size = anArray.length;
-        console.log(size);
+        let people =['josh', 'james', 'kelly', 'phill', 'lola']
+            for ( admitted of people){
+                if (admitted === 'phill' || admitted === 'lola'){
+                    
+                } else {
+                    console.log(admitted + ' is allowed');
+                    }     }
 
-        let nowAString = anArray.toString();
-        console.log(nowAString);
-
-        let atThat = anArray.at(2);
-        console.log(atThat);
-
-        let allJoined = anArray.join('@');
-        console.log(allJoined);
-
-    
-         let pushOn = anArray.push(9);
-        console.log(pushOn);
-        console.log(anArray);
-
-        //let shimmyShift = anArray.shift();
-        //console.log(shimmyShift);
-        //console.log(anArray);
-        
-        let shimmySplice = anArray.splice(3, 0,"im here");
-        console.log(shimmySplice);
-        console.log(anArray);
-
-        let shimmyBye = anArray.splice(1, 1);
-        console.log(shimmyBye);
-        console.log(anArray);
-
-        let shimSlice = anArray.slice(4);
-        console.log(shimSlice);
-        console.log(anArray);
-
-        let a = [[1, 2, 3], [4, 5, 6]];
-        console.log(a[0][1]);
-
-
-
-        //For loops and stuff for today.
-
-        const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
-
-        const listCat = cats.filter((sup) => sup.startsWith("L"));
-        console.log(listCat);
-
-        let shore = "here at the beach"
-        let backYard = "here at the backyard"
-
-        for (let i = 6; i < 12; i++) {
-            console.log(shore);
-        }
 
 
 
